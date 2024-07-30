@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 입력 요소</title>
+</head>
+<body>
+    <!-- <input /> : 사용자로부터 입력을 받는 기본 요소 -->
+    
+    <!-- type 속성 : 입력 요소의 형태 -->
+
+    <!-- text : type의 기본값, 문자열을 그대로 입력받음 -->
+    <input type="text"/>
+
+    <!-- password : 입력받은 문자열을 가림 -->
+    <input type="password"/>
+
+    <!-- 날짜와 관련된 타입은 firefox에서는 지원 안됨 -->
+    <!-- date : UI를 통해 날짜를 입력 받음-->
+    <input type="date"/>
+
+    <!-- time : UI를 통해 시간 입력 받음 -->
+    <input type="time"/>
+
+    <!-- datetime-local : UI를 통해 날짜 및 시간을 입력 받음-->
+    <input type="datetime-local"/>
+
+    <!-- file : 파일을 입력받을 수 있음 -->
+    <input type="file"/>
+    <!-- accept : 파일 입력시 확장자에 대한 제한-->
+    <input type="file" accept=".jpg .png"/>
+    <input type="file" accept="image/*"/>
+
+    <!-- number : 숫자만 입력받을 수 있음-->
+    <input type="number"/>
+    <!-- min, max, step : 최소값, 최대값, 스탭-->
+    <input type="number" min="-10" max="10" step="3"/>
+    <!-- range : 숫자의 선택 폭의 제한-->
+    <input type="range" min="-10" max="10" step="3"/>
+
+    <!-- checkbox : 주어진 리스트 중에서 복수를 선택할 수 있는 요소 -->
+    <!-- name 속성으로 체크박스를 그룹화 -->
+    <!-- value 속성이 반드시 필요함-->
+    <form>
+        <input type="checkbox" name="skill" value="JAVA"/>java
+        <input type="checkbox" name="skill" value="python"/>python
+        <input type="checkbox" name="skill" value="C"/>C
+        <input type="checkbox" name="skill" value="Ruby"/>ruby
+        <button>제출</button>
+    </form>
+    
+    <!-- radio : 주어진 리스트 중에 하나만 선택할 수 있는 요소-->
+    <!-- name 속성으로 체크박스를 그룹화, 같은 그룹 내에서 하나만 선택 가능 -->
+    <!-- value 속성이 반드시 필요함-->
+    <input type="radio" name="a" value="x"/>a
+    <input type="radio" name="a" value="y"/>a
+    <input type="radio" name="b" value="x"/>b
+    <input type="radio" name="b" value="y"/>b
+    
+    <!-- hidden : 화면에 보이지 않음-->
+    <form>
+        <input type="hidden" name="hiddenData" value="Hello"/>
+        <button>제출</button>
+    </form>
+
+    <!-- checked : checkbox와 radio 타입에 초기 선택 여부 지정-->
+    <input type="checkbox" checked/>
+    <input type="checkbox"/>
+
+    <!-- readonly : 입력 요소를 읽기 전용으로 지정-->
+    <input type="text" value="기본값" readonly/>
+
+    <!-- disabled : 입력 요소를 사용하지 않는 것으로 지정-->
+    <input type="text" value="사용 불가" disabled/>
+
+    <!-- <hr/> : 구분선 -->
+    <hr/>
+
+    <!-- <select></select> : 주어진 리스트에서 특정 요소를 선택할 때 사용하는 용도 -->
+    <!-- multiple : 다중 선택 가능-->
+    <select multiple>
+        <!-- <option></option> : 선택할 수 있는 항목 요소 -->
+        <!-- option 요소의 컨텐츠는 실제 값이 아님, 실제 값은 value 속성으로 지정 -->
+        <!-- selected : 초기 선택 여부 지정-->
+        <option value="apple">사과</option>
+        <option value="banana">바나나</option>
+        <option value="cacao">카카오</option>
+        <option value="blueberry" selected>블루베리</option>
+    </select>
+
+    <!-- <textarea></textarea> : 문자열을 여러 줄에 걸쳐서 작성할 수 있는 요소-->
+    <!-- rows, cols : textarea의 크기 지정-->
+    <!-- value 속성을 사용하지 않음, 만약에 기본값을 지정하고 싶을 땐 요소의 컨텐츠로 지정-->
+    <textarea rows="10" cols="5"></textarea>
+
+
+</body>
+</html>
