@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 텍스트 요소</title>
+</head>
+<body>
+    <!-- html 문서는 줄바꿈을 인식하지 못함 -->
+    <!-- 줄바꿈을 적용하고 싶다면 <br /> 태그를 줄 바꿈할 위치에 작성 -->
+    내가 그린 기린 그림은 잘 그린 기린 그림이고<br />
+    네가 그린 기린 그림은 잘 못 그린 기린 그림이다.<br />
+
+    <!-- html 문서는 띄어쓰기를 한 번만 인식 -->
+    <!-- 띄어쓰기를 여러번 적용할 땐 &nbsp; 사용 -->
+    안녕하세요&nbsp;&nbsp;&nbsp;&nbsp;안녕하세요<br/>
+
+    <!-- html 문서는 '< >' 사용시 태그로 인식할 수 있음 -->
+    <!-- '< >'를 문자로 사용하고 싶다면 &lt; &gt; 사용 -->
+    우승 국가는 <대한민국> 입니다.<br/>
+    우승 국가는 &lt;span&gt; 입니다.
+
+    <!-- <p> : 하나의 문담을 표현하는 요소 -->
+    <P>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </P>
+    <P>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</P>
+
+    <!-- html 태그는 대소문자 구분 X -->
+    <P></P>
+
+    <!-- html은 문법상 오류가 있더라도 에러를 출력하지 않음 -->
+    <!-- ex : 태그를 닫지 않음 -->
+    <!-- <p>안녕하세요. -->
+
+    <!-- xml 기반의 html은 대소문자 및 문법을 반드시 지켜야 정상 동작 -->
+
+    <!-- <h1></h1> ~ <h6><h6> : 제목을 표시하기 위한 요소 -->
+    <h1>h1 제목</h1>
+    <h2>h2 제목</h2>
+    <h3>h3 제목</h3>
+    <h6>h6 제목</h6>
+
+    <!-- <strong></strong> : 특정 문자열을 강조하기 위해 사용하는 요소, bold-->
+    <p>부산광역시 부산진구 <strong>중앙대로</strong> 668</p>
+
+    <!-- <em></em> : 특정 문자열을 강조하기 위해 사용하는 요소, 기운글꼴-->
+    <p>부산광역시 부산진구 <em>중앙대로</em> 668</p>
+    <p>부산광역시 부산진구 <strong><em>중앙대로</em></strong> 668</p>
+
+</body>
+</html>
