@@ -7,61 +7,99 @@
     <style>
 
         /*
-            display 속성 : 
-                - 
-                - 
+            display 속성 : 화면의 layout 정의에 중요한 역할
+                - block, inline, inline-block, table, flex, grid, none, ...
+                - display 속성 값은 상속되지 않음
         */
 
         /*
             block 레벨 요소 : 
-                - 
-                - 
-                - 
-                - 
-                - 
+                - 항상 새로운 라인에서 시작
+                - 부모 요소의 너비 전체에 해당하는 너비를 가져감(width : 100%)
+                - width, height, margin, padding 속성 모두 지정 가능
+                - block 레벨 요소는 inline 레벨 요소를 포함할 수 있음
+                - div, p, h1 ~ h6, ... 
         */
-        
+        .block-1 {
+            display: block;
+            height: 300px;
+            background-color: red;
+        }
+        .block-2 {
+            display: block;
+            height: 100px;
+            width: 300px;
+            padding: 50px;
+            margin: 50px;
+            background-color: greenyellow;
+        }
 
         /*
             inline 레벨 요소 :
-                - 
-                - 
-                - 
-                - 
-                - 
-                - 
+                - 줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치
+                - 컨텐츠의 높이와 너비 만큼 크기를 가져감
+                - width, height, margin-top, margin-bottom 속성 지정 불가
+                - inline 레벨 요소는 뒤에 공백이 있을 경우, 정의하지 않은 공간이 자동으로 지정
+                - inline 레벨 요소는 block 레벨 요소를 포함할 수 없음
+                - span, a, ...
         */
-        
+        .inline-1 {
+            display: inline;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 25px;
+            padding: 25px;
+        }
 
         /*
             inline-block 레벨 요소 : 
-                - 
-                - 
-                - 
-                - 
-                - 
+                - inline과 block 요소의 특징 모두 포함
+                - inline 처럼 지정된 사이즈만큼 너비 차지
+                - block 처럼 width, height, padding, margin 속성 모두 지정 가능
+                - 기본값으로 width는 컨텐츠의 사이즈를 따라감
+                - inline 처럼 요소 뒤에 공백이 존재한다면 지정하지 않은 공간 발생
                 - 
         */
-        
-
+        .inline-block-1 {
+            background-color: yellow;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+        .inline-block-2 {
+            display: inline-block;
+            background-color: plum;
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+        }
 
 
         /*
-            visibility 속성 : 
-                - visible : 
-                - hidden : 
-                - collapse : 
+            visibility 속성 : 요소를 보이게 할지 말지 지정하는 속성
+                - visible : 요소를 보이게 함(기본값)
+                - hidden : 요소를 보이지 않게 함(공간은 차지)
+                - collapse : table에서 행이나 열을 보이지 않게 함
         */
-        
-
-
+        .visibility {
+            visibility: visible;
+        }
+        .hidden {
+            display: none;
+        }
+        .collapse {
+            visibility: collapse;
+        }
 
         /*
             opacity 속성 : 
-                - 
-                - 
+                - 요소 전체의 투명도 지정
+                - 0 ~ 1의 값을 가짐(0 : 투명, 1 : 불투명)
         */
-        
+        .opacity {
+            opacity: 0.5;
+        }
 
     </style>
 </head>
