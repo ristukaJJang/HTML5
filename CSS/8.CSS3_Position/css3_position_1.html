@@ -8,45 +8,81 @@
     <style>
 
         /*
-            position 속성 : 
-                - 
+            position 속성 : 요소의 위치를 지정할 때 사용하는 요소
+                - top, left, right, bottom 속성과 함께 사용
         */
 
         /*
             static :
-                - 
-                - 
-                - 
-                - 
-                - 
+                - position 속성의 기본값
+                - 기본 요소의 배치 순서에 따라 위에서 아래로, 왼쪽에서 오른쪽으로 배치
+                - 부모 요소 내의 자식 요소로 존재할 때는 부모 요소의 위치를 기준으로 배치
+                - 직접 position 속성 값으로 지정할 때는 이미 지정되어 있는 position 값을 제거할 때 사용
+                - top, left, right, bottom 속성 적용 불가
         */
-        
-
+        .static-parent{
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+        }
+        .static-item {
+            position: static;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
 
         /*
             relative :
-                - 
-                - 
+                - 기존 위치를 기준으로 top, left, right, bottom 속성을 이용해서 상대 위치 지정
+                - static과의 차이점 : top, left, right, bottom 사용 여부
         */
-        
+        .relative-parent {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            position: relative;
+        }
+        .relative-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            top: 50px;
+            left: 50px;
+        }
 
 
         /*
             absolute :
-                - 
-                - 
-                - 
+                - 부모 또는 가장 가까이에 있는 상위 요소(위치가 명시되어 있는)를 기준으로 top, left, right, bottom 속성만큼 이동
+                - 모든 상위 요소가 static으로 지정되어 있으면, body를 기준으로 배치
+                - absolute 선언 시, block 레벨 요소의 너비가 기본적으로 컨텐츠의 너비를 따라감
         */
-        
+        .absolute-item{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
 
 
         /*
             fixed : 
-                - 
-                - 
-                - 
+                - 상위 요소와 관계없이 viewport 기준으로 top, left, right, bottom 속성 값만큼 이동
+                - 스크롤 되더라도 화면에 고정되어 있음
+                - fixed 선언 시 block 레벨 요소의 너비가 기본적으로 컨텐츠의 너비를 따라감
         */
-        
+        .fixed-item {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: fixed;
+            right: 50px;
+            top : 50px;
+        }
 
 
     </style>
