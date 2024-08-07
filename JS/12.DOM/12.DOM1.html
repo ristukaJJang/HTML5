@@ -27,23 +27,28 @@
 
         /*
             document.getElementById(id) : 
-            -
-            - 
-            - 
-            - 
+            - id 속성 값으로 요소 하나 선택
+            - 만약 동일한 id가 여러 개 있다면, 최상위의 요소만 선택
+            - HTMLElement를 상속받은 객체 반환
+            - 모든 브라우저에서 사용 가능
         */
-        
+        var userIdElement = document.getElementById('user-id');
+        console.log(userIdElement);
+        var formElement = document.getElementById('sign-in-form');
+        console.log(formElement);
 
 
         console.log('==============================');
 
         /*
              document.querySelector(cssSelector) : 
-             - 
-             - 
-             - 
+             - css 선택자를 사용하여 요소 하나 선택
+             - 여러 개가 선택된다면, 최상위 요소 하나만 선택
+             - HTMLElement를 상속받은 객체 반환
+             - IE8 이상에서만 사용 가능
          */
-        
+        var submitButtonElement = document.querySelector('#sign-in-form > button');
+        console.log(submitButtonElement);
          
 
         console.log('==============================');
@@ -54,35 +59,39 @@
 
         /*
             document.getElementsByClassName(class)
-            - 
-            - 
-            - 
-            - 
+            - class 속성 값으로 해당하는 요소를 모두 선택
+            - 공백으로 구분하여 여러 개의 클래스 지정 선택 가능
+            - HTMLCollection 반환
         */
-        
-        
+        var inputElements = document.getElementsByClassName('custom-input');
+        console.log(inputElements);
+        for(var inputElement of inputElements){
+            console.log(inputElement);
+        }
 
         console.log('==============================');
 
         /*
             document.getElementsByTagName(tagName)
-            - 
-            - 
-            - 
+            - 태그명으로 요소를 모두 선택
+            - HTMLCollection 반환
         */
-        
-        
+        var inputTagElements = document.getElementsByTagName('input');
+        console.log(inputTagElements);
 
         console.log('==============================');
 
         /*
             document.querySelectorAll(selector)
-            - 
-            - 
-            - 
+            - 지정된 선택자를 사용하여 요소 모두 선택
+            - NodeList 반환
         */
-        
-        
+        var formInputElements = document.querySelectorAll('#sign-in-form > input');
+        console.log(formInputElements);
+
+        for(var element of formInputElements) {
+            console.log(element);
+        }
 
         console.log('==============================');
 
@@ -92,22 +101,21 @@
 
         /*
             parentNode
-            - 
-            - 
-            - 
+            - 부모 요소를 탐색
+            - HTMLElement를 상속받은 객체 반환
         */
-        
+        console.log(formElement.parentNode);
         
 
         console.log('==============================');
 
         /*
             firstElementChild, lastElementChild
-            - 
-            - 
-            - 
+            - 자식 요소 선택
+            - HTMLElement를 상속받은 객체 반환
         */
-        
+        console.log(formElement.firstElementChild);
+        console.log(formElement.lastElementChild);
 
 
         console.log('==============================');
